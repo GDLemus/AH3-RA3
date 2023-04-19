@@ -24,7 +24,7 @@ int estado;
         j_correo = new javax.swing.JTextField();
         j_contrasenia = new javax.swing.JPasswordField();
         j_fecha_nacimiento = new javax.swing.JFormattedTextField();
-        j_guardar = new javax.swing.JButton();
+        j_eliminar = new javax.swing.JButton();
         j_cancelar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -68,12 +68,12 @@ int estado;
         j_fecha_nacimiento.setEditable(false);
         j_fecha_nacimiento.setBackground(new java.awt.Color(40, 157, 210));
 
-        j_guardar.setBackground(new java.awt.Color(40, 157, 210));
-        j_guardar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        j_guardar.setText("Eliminar Usuario");
-        j_guardar.addActionListener(new java.awt.event.ActionListener() {
+        j_eliminar.setBackground(new java.awt.Color(40, 157, 210));
+        j_eliminar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        j_eliminar.setText("Eliminar Usuario");
+        j_eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                j_guardarActionPerformed(evt);
+                j_eliminarActionPerformed(evt);
             }
         });
 
@@ -115,7 +115,7 @@ int estado;
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(j_guardar)
+                        .addComponent(j_eliminar)
                         .addGap(108, 108, 108)
                         .addComponent(j_cancelar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -177,7 +177,7 @@ int estado;
                     .addComponent(jLabel8))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(j_guardar)
+                    .addComponent(j_eliminar)
                     .addComponent(j_cancelar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -200,26 +200,34 @@ int estado;
         // TODO add your handling code here:
     }//GEN-LAST:event_j_contraseniaActionPerformed
 
-    private void j_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j_guardarActionPerformed
+    private void j_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j_eliminarActionPerformed
+        
+        
+        
+        
         UsuariosVista uv = new UsuariosVista();
         uv.setVisible(true);
         dispose();        
-        
-
-    }//GEN-LAST:event_j_guardarActionPerformed
+         
+    }//GEN-LAST:event_j_eliminarActionPerformed
     
-private void enviar(){
-                                    // nombre,apellido,telefono,direccion,correo,fecha_nacimiento,contrasenia,activo
-     UsuariosGT sgt = new UsuariosGT(j_nombre.getText(), j_apellido.getText(), Integer.parseInt(j_telefono.getText()), j_direccion.getText(), j_correo.getText(), j_fecha_nacimiento.getText(), estado , j_contrasenia.getText());
-     UsuariosDAORelacional ud = new UsuariosDAORelacional();
-     ud.modificar(sgt);
-     UsuariosVista Newframe = new UsuariosVista();
-     Newframe.setVisible(true);
-     dispose();
-  
-     }
     
-    public void Mostrar(int usuario_id){
+    
+    
+    
+    
+//private void enviar(){
+//                                    // nombre,apellido,telefono,direccion,correo,fecha_nacimiento,contrasenia,activo
+//     UsuariosGT sgt = new UsuariosGT(j_nombre.getText(), j_apellido.getText(), Integer.parseInt(j_telefono.getText()), j_direccion.getText(), j_correo.getText(), j_fecha_nacimiento.getText(), estado , j_contrasenia.getText());
+//     UsuariosDAORelacional ud = new UsuariosDAORelacional();
+//     ud.modificar(sgt);
+//     UsuariosVista Newframe = new UsuariosVista();
+//     Newframe.setVisible(true);
+//     dispose();
+//  
+//     }
+    
+    public void EliMostrar(int usuario_id){
         
         UsuariosDAORelacional sd = new UsuariosDAORelacional();
         
@@ -260,8 +268,8 @@ private void enviar(){
     private javax.swing.JPasswordField j_contrasenia;
     private javax.swing.JTextField j_correo;
     private javax.swing.JTextField j_direccion;
+    private javax.swing.JButton j_eliminar;
     private javax.swing.JFormattedTextField j_fecha_nacimiento;
-    private javax.swing.JButton j_guardar;
     private javax.swing.JTextField j_nombre;
     private javax.swing.JTextField j_telefono;
     // End of variables declaration//GEN-END:variables

@@ -170,11 +170,7 @@ public class UsuariosVista extends javax.swing.JFrame {
     
     
     }
-    
-    
-    
-    
-    
+
     
     
     
@@ -198,7 +194,10 @@ public class UsuariosVista extends javax.swing.JFrame {
     }//GEN-LAST:event_j_modificarActionPerformed
 
     private void j_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j_eliminarActionPerformed
-        eliminar_datos();
+         Eliminar ml = new Eliminar();
+         ml.setVisible(true);
+         dispose();
+         eliminar_datos();
     }//GEN-LAST:event_j_eliminarActionPerformed
 
     private void enviar_datos(){
@@ -216,17 +215,20 @@ public class UsuariosVista extends javax.swing.JFrame {
     
     int usuario_id = (int) j_tabla.getValueAt(j_tabla.getSelectedRow(), 0);
         
+//         Eliminar ml = new Eliminar();
+//         ml.Mostrar(usuario_id);
+//         ml.setVisible(true);
+//         dispose();
+
          Eliminar ml = new Eliminar();
-         ml.Mostrar(usuario_id);
+         ml.EliMostrar(usuario_id);
          ml.setVisible(true);
          dispose();
-
-
-//         UsuariosDAORelacional sd = new UsuariosDAORelacional();
-//         
-//         sd.eliminar(usuario_id);
-//         sd.setVisible(true);
-//         dispose();
+         UsuariosDAORelacional sd = new UsuariosDAORelacional();
+         sd.eliminar(usuario_id);
+         
+         
+         
 //         UsuariosVista uv = new UsuariosVista();
 //         uv.setVisible(true);
 //         dispose();

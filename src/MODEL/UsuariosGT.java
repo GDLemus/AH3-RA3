@@ -1,7 +1,7 @@
 package MODEL;
 
 import java.time.LocalDate;
-
+//GD
 public class UsuariosGT {
 // nombre,apellido,telefono,direccion,correo,fecha_nacimiento,contrasenia,activo    
     private int usuario_id;
@@ -14,6 +14,17 @@ public class UsuariosGT {
     private int rol_id;
     private int activo;
     private String contrasenia;
+
+    public UsuariosGT(int usuario_id, String nombre, String apellido, int telefono, String direccion, String correo_electronico, String fecha_nacimiento, String contrasenia) {
+        this.usuario_id = usuario_id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.correo_electronico = correo_electronico;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.contrasenia = contrasenia;
+    }
 
     public UsuariosGT(String nombre, String apellido, int rol_id) {
         this.nombre = nombre;

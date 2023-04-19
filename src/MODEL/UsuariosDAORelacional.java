@@ -19,7 +19,7 @@ public class UsuariosDAORelacional implements UsuariosDAO {
     @Override
     public LinkedList<UsuariosGT> listar() {
     
-        String sql = "select * from usuarios";
+        String sql = "select * from usuarios ";
         LinkedList<UsuariosGT> listar = new LinkedList<>();
         try {
             con = acceso.Conectar();
@@ -85,7 +85,7 @@ public class UsuariosDAORelacional implements UsuariosDAO {
             
     @Override
     public void modificar(UsuariosGT usuarios) {
-        String sql = "update usuarios set nombre=?, apellido=?, telefono=?, direccion=?, correo=?, fecha_nacimiento=?, contrasenia=?, activo=?where usuario_id=?;";
+        String sql = "update usuarios set nombre=?, apellido=?, telefono=?, direccion=?, correo_electronico=?, fecha_nacimiento=?, contrasenia=?, activo=? where usuario_id=?;";
         try {
             con = acceso.Conectar();
             ps = con.prepareStatement(sql);
@@ -97,6 +97,7 @@ public class UsuariosDAORelacional implements UsuariosDAO {
             ps.setString(6, usuarios.getFecha_nacimiento());
             ps.setString(7, usuarios.getContrasenia());
             ps.setInt(8, usuarios.getActivo());
+            ps.setInt(9, usuarios.getUsuario_id());
             ps.executeUpdate();
             
             

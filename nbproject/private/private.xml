@@ -3,15 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/MODEL/UsuariosDAORelacional.java</file>
             <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/VISTA/Eliminar.java</file>
-            <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/DAO/UsuariosDAO.java</file>
+            <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/MODEL/UsuariosDAORelacional.java</file>
             <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/MODEL/UsuariosGT.java</file>
-            <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/MODEL/Conexion.java</file>
-            <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/VISTA/Agregar.java</file>
             <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/VISTA/Modificar.java</file>
             <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/VISTA/UsuariosVista.java</file>
-            <file>file:/C:/Users/nomad/Documents/NetBeansProjects/Proyecto_HotelesGT/src/VISTA/Login.java</file>
         </group>
     </open-files>
 </project-private>
